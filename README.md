@@ -37,7 +37,7 @@ obs: foi considerado que cada aresta (distancia entre pontos vizinhos) vale 1 e 
 
 ###para subir o serviço:
 	- baixar este repositório (git clone https://github.com/mtakeshi/Closeness.git)
-	- iniciar utilizando o comando: **sbt run**
+	- iniciar utilizando o comando: sbt run
 
 		as dependências serão baixadas, o pacote será compilado e webservice será colocado no ar
 	
