@@ -9,13 +9,13 @@ programa escrito em scala para exercício de centralidade de nós.
 obs: foi considerado que cada aresta (distancia entre pontos vizinhos) vale 1 e não há direção nos relacionamentos.
 
 
-###para executar o serviço:
+###para subir o serviço:
 - baixar este repositório (git clone https://github.com/mtakeshi/Closeness.git)
 - iniciar utilizando o comando: **sbt run**
 
-	o pacote será compilado e subirá o webservice
+	as dependências serão baixadas, o pacote será compilado e webservice será colocado no ar
 	
-###para executar o webservice:
+###para chamar o webservice:
 é possível chamar os links abaixo:
 
 **http://localhost:8080/central**
