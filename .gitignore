@@ -5,6 +5,7 @@ ass
 .cache
 .history
 .lib/
+src/
 dist/*
 target/
 lib_managed/
