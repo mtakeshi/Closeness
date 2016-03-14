@@ -1,6 +1,6 @@
 # Closeness
 
-programa escrito em scala para exercício de centralidade de nós.
+programa escrito em scala para exercício de centralidade de nós (fontes relacionados ao webservice foram adaptados de fontes existentes).
 
 **farness** = somatoria das distancias de um ponto para os demais
 
