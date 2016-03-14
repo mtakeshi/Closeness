@@ -1,6 +1,7 @@
 package closeness
 
 import akka.actor.{Props, ActorSystem}
+
 import akka.io.IO
 import spray.can.Http
 
@@ -14,4 +15,5 @@ object Boot extends App with Configuration {
 
   // start HTTP server with rest service actor as a handler
   IO(Http) ! Http.Bind(restService, serviceHost, servicePort)
+  
 }

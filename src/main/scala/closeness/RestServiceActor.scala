@@ -66,20 +66,42 @@ trait RestService extends HttpService with SLF4JLogging {
     }
   }
 
-  val rest = 
-    path("node" / IntNumber ) {
-      id =>
+  val rest = respondWithMediaType(MediaTypes.`application/json`) {
+    path("central") {
         get {
-          distance.verificaFarness()
-          complete { "get node:" + id }
+          ctx: RequestContext =>
+            handleRequest(ctx) {
+              Right(distance.central) 
+            }
         }
     } ~
-      path("edge" / IntNumber) {
+      path("node" / Segment ) {
+      id =>
+        get {
+          ctx: RequestContext =>
+            handleRequest(ctx) {
+              Right(distance.getNode(id))
+            }
+        }
+    } ~
+      path("nodes") {
+        get {
+          ctx: RequestContext =>
+            handleRequest(ctx) {
+              Right(distance.getNodes())
+            }
+        }
+    } ~
+      path("aresta" / Segment ) {
         edge =>
-          put {
-            complete { "put edge" }
+          get {
+            ctx: RequestContext =>
+            handleRequest(ctx) {
+              Right(distance.adicionaAresta(edge))
+            }
           }
     }
+  }
 
 
   /**
