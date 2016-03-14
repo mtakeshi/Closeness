@@ -21,13 +21,16 @@ obs: foi considerado que cada aresta (distancia entre pontos vizinhos) vale 1 e 
 
 	passo 4: verifica todas as arestas (lista) onde o vértice aparece (23 30), (23, 35), (41 23), (56 23), ... 
 
-		retira as arestas que contenham vértices visitados
+		retira as arestas que contenham vértices visitados (que caracteriza passo para trás) 
+		e vértices que estejam no mesmo nível (que caracteriza passo para o lado)
 	
 		lista vértices-destino das arestas listadas
 
-	passo 5: volta ao passo 3 fornecendo lista vértices-destino (agora funcionando como lista vértices-origem) até que todos os vértices tenham sido visitados
+	passo 5: volta ao passo 3 fornecendo lista vértices-destino (agora funcionando como lista vértices-origem) 
+		até que todos os vértices tenham sido visitados
 
-		a cada iteração é somado um nível e multiplicado pela quantidade de vértices encontrados (ao final temos a distância do vértice inicial para os demais vértices)
+		a cada iteração é somado um nível e multiplicado pela quantidade de vértices encontrados (ao final 
+		temos a distância do vértice inicial para os demais vértices)
 
 	o cálculo é feito para cada vértice encontrado no passo 2
 
